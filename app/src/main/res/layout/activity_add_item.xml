@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".AddItem">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:layout_scrollFlags="scroll|enterAlways"/>
+    <RelativeLayout
+        android:id="@+id/llcontent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter Item name..!"
+            android:textSize="18sp"
+            android:id="@+id/et_name_text"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/et_name_text"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="eg.Toothpaste"
+            android:inputType="text"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter Quantity..!"
+            android:layout_below="@id/et_name"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="30dp"
+            android:id="@+id/et_quantity_name"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_bt"
+
+            android:background="@color/white"
+            android:layout_alignTop="@+id/et_name"
+            android:layout_alignEnd="@+id/et_name"
+            android:src="@drawable/ic_mic"/>
+        <EditText
+            android:id="@+id/et_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/et_quantity_name"
+            android:layout_marginRight="20dp"
+            android:hint="eg.2 Pack"
+            android:inputType="text"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgimg"
+            android:background="@color/white"
+            android:layout_alignTop="@id/et_quantity"
+            android:layout_alignRight="@id/et_quantity"
+
+            android:src="@drawable/ic_mic"/>
+        <Button
+            android:id="@+id/bt_add"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="10dp"
+            android:layout_below="@id/et_quantity"
+            android:paddingRight="10dp"
+            android:background="@drawable/btn_corner"
+            android:layout_marginTop="40dp"
+            android:text="Add Item"
+            android:textSize="18sp"
+            android:backgroundTint="#546f7a"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:layout_marginTop="200dp"
+        android:layout_below="@+id/llcontent"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-6873376364307728/6633985757">
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>
